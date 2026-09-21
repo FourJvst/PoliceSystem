@@ -1,0 +1,84 @@
+name: PoliceCuffs
+version: 1.0.0
+main: plugin.roleplay.police.App
+api-version: '1.20'
+softdepend: [Ranks, ProtocolLib]
+commands:
+  duty:
+    description: Geht als Polizei in den Dienst oder außer Dienst.
+    usage: /duty
+  rankup:
+    description: Befördert einen Spieler um einen Polizei-Rang.
+    usage: /rankup <Spieler>
+  rankdown:
+    description: Setzt einen Spieler um einen Polizei-Rang zurück.
+    usage: /rankdown <Spieler>
+  setrank:
+    description: Setzt einen Spieler als Polizei auf einen Rang von 0 bis 6.
+    usage: /setrank <Spieler> <Rang 0-6>
+  setleader:
+    description: Gibt einem Polizei-Rang-5- oder Rang-6-Spieler Leaderrechte.
+    usage: /setleader <Spieler>
+  invite:
+    description: Lädt einen Spieler in die Polizei-Fraktion ein.
+    usage: /invite <Spieler>
+  annehmen:
+    description: Nimmt eine Polizei-Einladung an.
+    usage: /annehmen
+  ablehnen:
+    description: Lehnt eine Polizei-Einladung ab.
+    usage: /ablehnen
+  uninvite:
+    description: Verlässt selbst oder entfernt einen Spieler aus der Polizei-Fraktion.
+    usage: /uninvite [Spieler]
+  uncuff:
+    description: Entfernt die Handschellen von einem verhafteten Spieler.
+    usage: /uncuff <Spieler>
+  wps:
+    description: Schreibt einen Spieler wegen einer Straftat aus.
+    usage: /wps <Spieler> <Grund>
+  delwps:
+    description: Löscht die Wanted-Akte eines Spielers.
+    usage: /delwps <Spieler>
+  f:
+    description: Sendet eine Nachricht in den Polizei-Chat.
+    usage: /f <Nachricht>
+    aliases: [policechat]
+  search:
+    description: Öffnet das Drogen-Inventory eines Spielers zur Prüfung.
+    usage: /search <Spieler>
+  takedrugs:
+    description: Entnimmt einem Spieler alle Drogen.
+    usage: /takedrugs <Spieler>
+  cuff:
+    description: Verhaftet oder lässt einen Spieler frei.
+    usage: /cuff <Spieler>
+    permission: police.cuff
+permissions:
+  police.rank.0:
+    description: Polizei Rang 0
+    default: false
+  police.rank.1:
+    description: Polizei Rang 1
+    default: false
+  police.rank.2:
+    description: Polizei Rang 2
+    default: false
+  police.rank.3:
+    description: Polizei Rang 3
+    default: false
+  police.rank.4:
+    description: Polizei Rang 4
+    default: false
+  police.rank.5:
+    description: Polizei Rang 5
+    default: false
+  police.rank.6:
+    description: Polizei Rang 6 (höchster Rang)
+    default: false
+  police.rank.leader:
+    description: Darf als Leader untergeordnete Polizei-Ränge vergeben.
+    default: false
+  police.cuff:
+    description: Darf Spieler verhaften.
+    default: op
